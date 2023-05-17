@@ -1,17 +1,26 @@
 <ion-header [translucent]="true">
+
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title class="ion-text-center">
+      Ofertas
     </ion-title>
   </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar color="light" placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let vendedor of vendedores">      
+      <ion-label class="ion-text-wrap" (click)="mostrarOferta(vendedor.code)">
+        <ion-chip color="primary">{{ vendedor.code }}</ion-chip> 
+        <ion-chip color="primary">{{ vendedor.departamento }}</ion-chip> 
+      </ion-label>    
+    </ion-item>
+  </ion-list>
+  
 </ion-content>

@@ -1,17 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="ion-text-center">
+      Actividades
     </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button disabled>
+        <ion-icon slot="icon-only"></ion-icon>
+      </ion-button>      
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button 
+                  (click)="addActividad()">
+        <ion-icon slot="icon-only"
+                  name="add-circle"
+                  color="primary"
+                  ></ion-icon>
+      </ion-button>      
+    </ion-buttons>
+    
+
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar color="light"
+                   placeholder="Buscar"
+                   ></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true">  
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let visita of visitas">      
+      <ion-label class="ion-text-wrap" (click)="mostrarActividad(visita.entryNo)">
+        <ion-chip color="primary">{{ visita.entryNo }}</ion-chip> 
+        <ion-chip color="primary">{{ visita.vendorName }}</ion-chip> 
+        <ion-chip color="primary">{{ visita.contactNo }}</ion-chip> 
+        <ion-chip color="primary">{{ visita.contactCompanyName }}</ion-chip> 
+        <ion-chip color="primary">{{ visita.contactNo }}</ion-chip> 
+        
+        <h3><b>Asunto:</b> {{ visita.subject }}</h3>
+        <h3><b>Descripción:</b> {{visita.description }}</h3>
+      </ion-label>    
+    </ion-item>
+  </ion-list>
+
 </ion-content>

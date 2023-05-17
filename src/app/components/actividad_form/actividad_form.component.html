@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+          <ion-icon slot="icon-only"
+                    name="arrow-back-circle"
+                    color="primary"
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear"
+                  disabled>
+          <ion-icon slot="icon-only"                   
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Añadir actividad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+
+    <ion-item>
+      <ion-input label="Propietario" [(ngModel)]="valuePropietario" [readonly]="true" labelPlacement="stacked"></ion-input>
+      <ion-button color="primary" (click)="seleccionar('propietario')">...</ion-button>      
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Tipo" [(ngModel)]="valueTipo" [readonly]="true" labelPlacement="stacked"></ion-input>
+      <ion-button color="primary" (click)="seleccionar('tipo')">...</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha inicio</ion-label>
+      <ion-datetime-button datetime="fechainicio"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="fechainicio"></ion-datetime>
+        </ng-template>
+      </ion-modal>      
+    </ion-item>    
+
+    <ion-item>
+      <ion-input label="Estado" [(ngModel)]="valueEstado" [readonly]="true" labelPlacement="stacked"></ion-input>
+      <ion-button color="primary" (click)="seleccionar('estado')">...</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Código cliente" [(ngModel)]="valueCodigo" [readonly]="true" labelPlacement="stacked"></ion-input>
+      <ion-button color="primary" (click)="seleccionar('codigo')">...</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Cliente" [(ngModel)]="valueCliente" [readonly]="true" labelPlacement="stacked"></ion-input>
+      <ion-button color="primary" (click)="seleccionar('cliente')">...</ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Plat. cliente" [(ngModel)]="valuePlat" [readonly]="true" labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Contacto cliente" [(ngModel)]="valueContacto" [readonly]="true" labelPlacement="stacked"></ion-input>
+      <!-- <ion-button color="primary" (click)="seleccionar('contacto')">...</ion-button> -->
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Oferta asociada" labelPlacement="stacked" placeholder="Introduzca"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Descripción"
+                 labelPlacement="stacked"
+                 placeholder="Introduzca"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha finalización</ion-label>
+      <ion-datetime-button datetime="fechafin"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="fechafin"></ion-datetime>
+        </ng-template>
+      </ion-modal>      
+    </ion-item> 
+
+    <ion-item>
+      <ion-input label="Comentarios" labelPlacement="stacked" placeholder="Introduzca"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Próxima visita</ion-label>
+      <ion-datetime-button datetime="proxvisita"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="proxvisita"></ion-datetime>
+        </ng-template>
+      </ion-modal>      
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="block" >
+    Guardar
+  </ion-button>
+
+
+</ion-content>

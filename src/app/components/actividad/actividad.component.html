@@ -1,0 +1,102 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+          <ion-icon slot="icon-only"
+                    name="arrow-back"
+                    color="primary"
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear"
+                  disabled>
+          <ion-icon slot="icon-only"                   
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Actividad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list *ngIf="visita">
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Id</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.entryNo }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Código comercial</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.salespersonCode }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Asunto</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.subject }}</ion-label>      
+    </ion-item>  
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Descripción</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.description }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Id contacto</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.contactNo }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Id compañia contacto</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.contactCompanyNo }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Medio contacto</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.contactVia }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Vendedor</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.vendorName }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Nombre contacto</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.contactName }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Nombre compañia contacto</ion-chip>
+      </ion-label>       
+      <ion-label>{{ visita.contactCompanyName}}</ion-label>      
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

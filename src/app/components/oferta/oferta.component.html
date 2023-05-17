@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+          <ion-icon slot="icon-only"
+                    name="arrow-back"
+                    color="primary"
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear"
+                  disabled>
+          <ion-icon slot="icon-only"                   
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Oferta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list *ngIf="vendedor">
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Código</ion-chip>
+      </ion-label>       
+      <ion-label>{{ vendedor.code }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Nombre</ion-chip>
+      </ion-label>       
+      <ion-label>{{ vendedor.nombre }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">E-mail</ion-chip>
+      </ion-label>       
+      <ion-label>{{ vendedor.email}}</ion-label>      
+    </ion-item>  
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Departamento</ion-chip>
+      </ion-label>       
+      <ion-label>{{ vendedor.departamento }}</ion-label>      
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
+
+

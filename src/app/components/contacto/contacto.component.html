@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+          <ion-icon slot="icon-only"
+                    name="arrow-back"
+                    color="primary"
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear"
+                  disabled>
+          <ion-icon slot="icon-only"                   
+                    size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list *ngIf="contacto">
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Código</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.code }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Nombre</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.nombre }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Dirección</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.direccion }}</ion-label>      
+    </ion-item>  
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Ciudad</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.ciudad }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Provincia</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.provincia }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">Teléfono</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.telefono }}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-chip color="primary">E-mail</ion-chip>
+      </ion-label>       
+      <ion-label>{{ contacto.email }}</ion-label>      
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
+
