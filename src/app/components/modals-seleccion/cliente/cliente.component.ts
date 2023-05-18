@@ -11,6 +11,7 @@ export class ClienteComponent  implements OnInit {
 
   clientes: string[] = [];
   cliente: string = '';
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private loadingCtrl: LoadingController,

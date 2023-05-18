@@ -11,6 +11,7 @@ export class CodClienteComponent  implements OnInit {
 
   codigos: string[] = [];
   codigo: string = '';
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private loadingCtrl: LoadingController,

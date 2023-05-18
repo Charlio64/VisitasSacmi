@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title class="ion-text-center">
       Actividades
@@ -25,7 +25,8 @@
 
   <ion-toolbar>
     <ion-searchbar color="light"
-                   placeholder="Buscar"
+                   placeholder="Buscar"                   
+                   [(ngModel)]="termino"                  
                    ></ion-searchbar>
   </ion-toolbar>
 </ion-header>
@@ -33,7 +34,7 @@
 <ion-content [fullscreen]="true">  
 
   <ion-list>
-    <ion-item *ngFor="let visita of visitas">      
+    <ion-item *ngFor="let visita of visitas | filtro: termino">      
       <ion-label class="ion-text-wrap" (click)="mostrarActividad(visita.entryNo)">
         <ion-chip color="primary">{{ visita.entryNo }}</ion-chip> 
         <ion-chip color="primary">{{ visita.vendorName }}</ion-chip> 

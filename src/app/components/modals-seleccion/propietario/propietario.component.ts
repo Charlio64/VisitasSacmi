@@ -13,6 +13,7 @@ export class PropietarioComponent  implements OnInit {
 
   propietarios: string[] = [];
   propietario: string = '';
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private dataService: DataService) { }

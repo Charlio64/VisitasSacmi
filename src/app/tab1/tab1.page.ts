@@ -14,6 +14,7 @@ import { Visita } from '../interfaces/interfaces';
 export class Tab1Page implements  OnInit{
 
   visitas: Visita[] = [];
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private dataService: DataService) {}

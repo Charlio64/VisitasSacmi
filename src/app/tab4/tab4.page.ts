@@ -12,6 +12,7 @@ import { DataService } from '../services/data.service';
 export class Tab4Page implements OnInit {
 
   usuarios!: Observable<any>;
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private dataService: DataService) {}

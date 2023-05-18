@@ -13,6 +13,7 @@ import { Vendedor } from '../interfaces/interfaces';
 export class Tab3Page implements OnInit {
 
   vendedores: Vendedor[] = [];
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private dataService: DataService) {}

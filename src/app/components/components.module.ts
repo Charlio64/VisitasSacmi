@@ -16,6 +16,7 @@ import { CodClienteComponent } from './modals-seleccion/cod-cliente/cod-cliente.
 import { ContactoDatoComponent } from './modals-seleccion/contacto-dato/contacto-dato.component';
 
 import { ClienteComponent } from './modals-seleccion/cliente/cliente.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ClienteComponent } from './modals-seleccion/cliente/cliente.component';
   imports: [
     CommonModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    PipesModule
   ]
 })
 export class ComponentsModule { }

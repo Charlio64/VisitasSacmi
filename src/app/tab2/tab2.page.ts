@@ -14,6 +14,7 @@ export class Tab2Page implements OnInit{
 
   // contactos: Contacto[] = [];
   parteContactos: Contacto[] = []; // Los 50 primeros
+  termino: string = '';
 
   constructor(private modalCtrl: ModalController,
               private loadingCtrl: LoadingController,
